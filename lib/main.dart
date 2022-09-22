@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'Pages/BookingPage.dart';
 import 'Pages/CollectionPage.dart';
 import 'Pages/FavoritePage.dart';
+import 'Pages/OtpPage.dart';
 import 'Pages/ProfilePage.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const MyHomePage(),
+      home: const OtpPage(),
     );
   }
 }
