@@ -1,3 +1,4 @@
+import 'package:firstproject/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,13 +14,10 @@ class _OtpPageState extends State<OtpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFC0C0C0),
+
       appBar: AppBar(
-        backgroundColor: const Color(0xFFC0C0C0),
-        leading: const IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: null,
-        ),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
         title: const Text(
           'OTP Verification',
           style: TextStyle(
@@ -186,7 +184,12 @@ class _OtpPageState extends State<OtpPage> {
             ),
             Center(
               child: GestureDetector(
-                onTap: null,
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyHomePage(),
+                  ),
+                ),
                 child: Container(
                   width: MediaQuery.of(context).size.width * 0.9,
                   height: 50,
@@ -214,7 +217,19 @@ class _OtpPageState extends State<OtpPage> {
                   style: TextStyle(fontFamily: 'Cabin',fontSize: 15),
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed:  () => showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        title: const Text('Check your mail'),
+                        content: const Text('Verification Code has been sent.'),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, 'OK'),
+                            child: const Text('OK'),
+                          ),
+                        ],
+                      ),
+                    ),
                     child: const Text(
                       'Resend',
                       style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:firstproject/Pages/BookPage.dart';
 import 'package:flutter/material.dart';
 
 import 'Pages/BookingPage.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const OtpPage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -40,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     _screens = [
       const CollectionPage(),
-      const BookingPage(),
+      const BookPage(),
       const FavoritePage(),
       const ProfilePage()
     ];

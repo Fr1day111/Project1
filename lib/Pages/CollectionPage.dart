@@ -1,3 +1,4 @@
+import 'package:firstproject/Pages/pageTwo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -303,7 +304,12 @@ class _CollectionPageState extends State<CollectionPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GestureDetector(
-                    onTap: null,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const pageTwo(),
+                      ),
+                    ),
                     child: Container(
                       width: 160,
                       decoration: BoxDecoration(
@@ -370,7 +376,12 @@ class _CollectionPageState extends State<CollectionPage> {
                     ),
                   ),
                   GestureDetector(
-                    onTap: null,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const pageTwo(),
+                      ),
+                    ),
                     child: Container(
                       width: 160,
                       decoration: BoxDecoration(
