@@ -1,3 +1,4 @@
+import 'package:firstproject/Pages/NotificationPage.dart';
 import 'package:firstproject/Pages/pageTwo.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class _CollectionPageState extends State<CollectionPage> {
   Widget build(BuildContext context) {
     double sWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      backgroundColor: const Color(0xFFC0C0C0),
+      backgroundColor: const Color(0xFFEFF1F5),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -39,12 +40,18 @@ class _CollectionPageState extends State<CollectionPage> {
                       ],
                     ),
                     SizedBox(width: sWidth * 0.4),
-                    const Align(
-                      child: ImageIcon(
-                        color: Color(0xFF4554DF),
-                        AssetImage("Assets/Icons/Notification.png"),
-                      ),
-                    ),
+                     GestureDetector(
+                       onTap: () => Navigator.push(
+                         context,
+                         MaterialPageRoute(
+                           builder: (context) => NotificationPage(),
+                         ),
+                       ),
+                       child: ImageIcon(
+                         color: Color(0xFF4554DF),
+                         AssetImage("Assets/Icons/Notification.png"),
+                       ),
+                     ),
                   ],
                 ),
               ),
@@ -57,6 +64,14 @@ class _CollectionPageState extends State<CollectionPage> {
                 height: 140,
                 width: double.infinity,
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 3,
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
                   image: const DecorationImage(
                       image: AssetImage("Assets/Photos/Bg1.png"),
                       fit: BoxFit.cover),
@@ -97,6 +112,14 @@ class _CollectionPageState extends State<CollectionPage> {
                 height: 170,
                 width: double.infinity,
                 decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 3,
+                      blurRadius: 5,
+                      offset: const Offset(0, 3), // changes position of shadow
+                    ),
+                  ],
                   color: Colors.white,
                   borderRadius:
                       BorderRadius.circular(20), //border corner radius
@@ -212,6 +235,14 @@ class _CollectionPageState extends State<CollectionPage> {
                     height: 100,
                     width: 100,
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
                       color: Colors.white,
                       borderRadius:
                           BorderRadius.circular(9), //border corner radius
@@ -233,6 +264,14 @@ class _CollectionPageState extends State<CollectionPage> {
                     height: 100,
                     width: 100,
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
                       color: Colors.white,
                       borderRadius:
                           BorderRadius.circular(9), //border corner radius
@@ -254,6 +293,14 @@ class _CollectionPageState extends State<CollectionPage> {
                     height: 100,
                     width: 100,
                     decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 3,
+                          blurRadius: 5,
+                          offset: const Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
                       color: Colors.white,
                       borderRadius:
                           BorderRadius.circular(9), //border corner radius
@@ -313,6 +360,14 @@ class _CollectionPageState extends State<CollectionPage> {
                     child: Container(
                       width: 160,
                       decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 3,
+                            blurRadius: 5,
+                            offset: const Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
                         color: Colors.white,
                         borderRadius:
                             BorderRadius.circular(9), //border corner radius
@@ -385,6 +440,14 @@ class _CollectionPageState extends State<CollectionPage> {
                     child: Container(
                       width: 160,
                       decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            spreadRadius: 3,
+                            blurRadius: 5,
+                            offset: const Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
                         color: Colors.white,
                         borderRadius:
                             BorderRadius.circular(9), //border corner radius
